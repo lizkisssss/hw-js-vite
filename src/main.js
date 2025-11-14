@@ -1,10 +1,6 @@
 import debounce from 'lodash.debounce';
-import { error, defaultModules } from '@pnotify/core'; 
+import { error, defaultModules } from '@pnotify/core';
 import * as PNotifyMobile from '@pnotify/mobile'; 
-
-defaultModules.set(PNotifyMobile, {});
-
-// ... інший код
 
 defaultModules.set(PNotifyMobile, {});
 
@@ -46,11 +42,13 @@ function renderCountryInfo(country) {
   const languages = country.languages.map(lang => `<li>${lang.name}</li>`).join('');
 
   const markup = `
-    <h2>${country.name}</h2>
-    <p><b>Capital:</b> ${country.capital}</p>
-    <p><b>Population:</b> ${country.population.toLocaleString()}</p>
-    <p><b>Languages:</b></p>
-    <ul>${languages}</ul>
+    <div>
+        <h2>${country.name}</h2>
+        <p><b>Capital:</b> ${country.capital}</p>
+        <p><b>Population:</b> ${country.population.toLocaleString()}</p>
+        <p><b>Languages:</b></p>
+        <ul>${languages}</ul>
+    </div>
     <img src="${country.flags.svg}" alt="Flag of ${country.name}" width="200" style="margin-top: 15px;">
   `;
   refs.countryInfo.innerHTML = markup;
