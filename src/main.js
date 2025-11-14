@@ -1,6 +1,10 @@
 import debounce from 'lodash.debounce';
-import { error, defaultModules } from '@pnotify/core';
-import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js'; 
+import { error, defaultModules } from '@pnotify/core'; 
+import * as PNotifyMobile from '@pnotify/mobile'; 
+
+defaultModules.set(PNotifyMobile, {});
+
+// ... інший код
 
 defaultModules.set(PNotifyMobile, {});
 
