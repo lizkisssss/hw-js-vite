@@ -9,14 +9,16 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "glob": "^8.1.0",
+    "glob": "^11.0.3",
     "vite": "^4.0.5"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@pnotify/core": "^5.2.0",
     "body": "^5.1.0",
     "body-scroll-lock": "^4.0.0-beta.0",
+    "lodash.debounce": "^4.0.8",
     "skroll": "^1.4.3",
     "swiper": "^10.0.4",
     "vite-plugin-full-reload": "^1.0.5",
